@@ -1,0 +1,37 @@
+name: lab1
+
+topology:
+  nodes:
+    switch1:
+      kind: juniper_vjunosswitch
+      image: vrnetlab/vr-routeros:6.47.9
+      startup-config: ./switch1 
+    switch2:
+      kind: juniper_vjunosswitch
+      image: vrnetlab/vr-routeros:6.47.9
+      startup-config: ./switch2
+    switch3:
+      kind: juniper_vjunosswitch
+      image: vrnetlab/vr-routeros:6.47.9
+      startup-config: ./switch3
+    router:
+      kind: juniper_vjunosrouter #мб поменять на cisco
+      image: vrnetlab/vr-routeros:6.47.9
+      startup-config: ./router
+    pc1:
+      kind: linux
+      image: alpine:latest
+    pc2:
+      kind: linux
+      image: alpine:latest
+
+  links:
+    - endpoints: ["switch1:eth2", "router:eth2"]
+    - endpoints: ["switch1:eth3", "switch2:eth2"]
+    - endpoints: ["switch2:eth3", "pc1:eth2"]
+    - endpoints: ["switch1:eth4", "switch3:eth2"]
+    - endpoints: ["switch3:eth3", "pc2:eth2"]
+
+mgmt:
+  network: srl-mgmt
+  ipv4-subnet: 192.21.20.0/24
