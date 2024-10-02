@@ -5,19 +5,19 @@ topology:
     switch1:
       kind: juniper_vjunosswitch
       image: vrnetlab/vr-routeros:6.47.9
-      startup-config: ./switch1 
+      startup-config: ./configs/switch1 
     switch2:
       kind: juniper_vjunosswitch
       image: vrnetlab/vr-routeros:6.47.9
-      startup-config: ./switch2
+      startup-config: ./configs/switch2
     switch3:
       kind: juniper_vjunosswitch
       image: vrnetlab/vr-routeros:6.47.9
-      startup-config: ./switch3
+      startup-config: ./configs/switch3
     router:
-      kind: juniper_vjunosrouter #мб поменять на cisco
+      kind: juniper_vjunosrouter 
       image: vrnetlab/vr-routeros:6.47.9
-      startup-config: ./router
+      startup-config: ./configs/router
     pc1:
       kind: linux
       image: alpine:latest

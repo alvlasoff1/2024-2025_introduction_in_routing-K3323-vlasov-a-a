@@ -12,7 +12,7 @@ all:
         ansible_password: admin@123
       hosts:
         clab-lab1-router:
-          ansible_host: 192.21.20.6
+          ansible_host: 192.21.20.5
     juniper_vjunosswitch:
       vars:
         # ansible_connection: set ansible_connection variable if required
@@ -20,14 +20,14 @@ all:
         ansible_password: admin@123
       hosts:
         clab-lab1-switch1:
-          ansible_host: 192.21.20.4
-        clab-lab1-switch2:
           ansible_host: 192.21.20.7
+        clab-lab1-switch2:
+          ansible_host: 192.21.20.6
         clab-lab1-switch3:
-          ansible_host: 192.21.20.5
+          ansible_host: 192.21.20.3
     linux:
       hosts:
         clab-lab1-pc1:
           ansible_host: 192.21.20.2
         clab-lab1-pc2:
-          ansible_host: 192.21.20.3
+          ansible_host: 192.21.20.4
