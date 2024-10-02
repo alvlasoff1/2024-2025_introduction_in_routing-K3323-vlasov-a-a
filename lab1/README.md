@@ -6,14 +6,14 @@ Course: [Introduction in routing](https://github.com/itmo-ict-faculty/introducti
 
 Year: 2023/2024
 
-Group: K66666
-Author: Filianin Ivan Victorovich
+Group: K3323
+Author: Vlasov Aleksandr Alekseevich
 
 Lab: Lab1
 
 Date of create: 20.09.2024
 
-Date of finished:
+Date of finished: 02.10.2024
 
 
 ## Лабораторная 1
