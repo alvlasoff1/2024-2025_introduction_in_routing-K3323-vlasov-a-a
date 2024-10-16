@@ -1,9 +1,9 @@
 /interface wireless security-profiles
 set [ find default=yes ] supplicant-identity=MikroTik
 /ip pool
-add name=dhcp_pool_frt ranges=192.168.3.3-192.168.3.100
+add name=frt ranges=192.168.3.3-192.168.3.100
 /ip dhcp-server
-add address-pool=dhcp_pool_frt disabled=no interface=ether5 name=dhcp_frt
+add address-pool=frt disabled=no interface=ether5 name=frt
 /ip address
 add address=10.10.2.3/24 interface=ether3 network=10.10.2.0
 add address=10.10.3.2/24 interface=ether4 network=10.10.3.0
