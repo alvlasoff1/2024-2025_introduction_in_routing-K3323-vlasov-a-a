@@ -5,8 +5,8 @@ add name=frt ranges=192.168.3.3-192.168.3.100
 /ip dhcp-server
 add address-pool=frt disabled=no interface=ether5 name=frt
 /ip address
-add address=10.10.2.3/24 interface=ether3 network=10.10.2.0
-add address=10.10.3.2/24 interface=ether4 network=10.10.3.0
+add address=10.10.2.3/30 interface=ether3 network=10.10.2.0
+add address=10.10.3.2/30 interface=ether4 network=10.10.3.0
 add address=192.168.3.2/24 interface=ether5 network=192.168.3.0
 /ip dhcp-client
 add disabled=no interface=ether1

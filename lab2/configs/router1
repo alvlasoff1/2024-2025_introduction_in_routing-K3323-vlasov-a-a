@@ -5,8 +5,8 @@ add name=msk ranges=192.168.1.3-192.168.1.100
 /ip dhcp-server
 add address-pool=msk disabled=no interface=ether5 name=msk
 /ip address
-add address=10.10.1.2/24 interface=ether3 network=10.10.1.0
-add address=10.10.3.3/24 interface=ether4 network=10.10.3.0
+add address=10.10.1.2/30 interface=ether3 network=10.10.1.0
+add address=10.10.3.3/30 interface=ether4 network=10.10.3.0
 add address=192.168.1.2/24 interface=ether5 network=192.168.1.0
 /ip dhcp-client
 add disabled=no interface=ether1
