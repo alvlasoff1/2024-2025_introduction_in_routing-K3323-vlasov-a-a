@@ -23,7 +23,7 @@ Date of finished: 16.10.2024
 
 ![](images/top.png)
 
-### Конифги:
+### Конфги:
 
 - Router 1
 
