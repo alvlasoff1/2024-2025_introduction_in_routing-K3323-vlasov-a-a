@@ -14,7 +14,7 @@ Lab: Lab2
 
 Date of create: 01.11.2024
 
-Date of finished:
+Date of finished: 06.11.2024
 
 
 ## Лабораторная 2
