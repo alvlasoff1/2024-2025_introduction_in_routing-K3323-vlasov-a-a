@@ -1,0 +1,43 @@
+name: lab4
+mgmt:
+    network: mgmt-net
+    ipv4-subnet: 192.168.100.0/24
+topology:
+    kinds:
+        vr-ros:
+            image: vrnetlab/vr-routeros:6.47.9
+        linux:
+          image: alpine:latest
+    nodes:
+        R01_SPB:
+            kind: vr-ros
+        R01_HKI:
+            kind: vr-ros
+        R01_LBN:
+            kind: vr-ros
+        R01_SVL:
+            kind: vr-ros
+        R01_LND:
+            kind: vr-ros
+        R01_NY:
+            kind: vr-ros
+        PC1:
+            kind: linux
+        PC2:
+            kind: linux
+        PC3:
+            kind: linux
+    links:
+        - endpoints: ["PC1:eth2", "R01_SPB:eth2"]
+        - endpoints: ["R01_SPB:eth3", "R01_HKI:eth2"]
+        - endpoints: ["R01_HKI:eth3", "R01_LBN:eth2"]
+        - endpoints: ["R01_LBN:eth3", "R01_SVL:eth2"]
+        - endpoints: ["R01_SVL:eth3", "PC3:eth2"]
+        - endpoints: ["R01_LBN:eth4", "R01_LND:eth2"]
+        - endpoints: ["R01_LND:eth3", "R01_NY:eth2"]
+        - endpoints: ["R01_NY:eth3", "PC2:eth2"]
+        - endpoints: ["R01_LND:eth4", "R01_HKI:eth4"]
+
+
+
+
